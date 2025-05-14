@@ -9,7 +9,7 @@ server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 server_socket.bind((HOST, PORT))
 
-server socket.listen()
+server_socket.listen()
 
 print(f"Echo 서버 시작: {HOST}:{PORT}에서 클라이언트 연결 대기중...")
 
