@@ -7,6 +7,7 @@ HOST, PORT = '0.0.0.0', 9999
 def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as srv:
         srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        srv.bind((HOST, PORT))
         srv.listen(1)
         print(f"[Server] Listening on {HOST}:{PORT}")
 
